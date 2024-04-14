@@ -1,3 +1,4 @@
+import AdminDashboard from "@/modules/admin-dashboard/admin-dashboard";
 import Login from "@/modules/authentication/login-page/login";
 import GeneralError from "@/modules/error-pages/general-error";
 import NotFoundError from "@/modules/error-pages/not-found";
@@ -8,7 +9,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     lazy: async () => ({
-      Component: (await import("@/layouts/HomeLayout")).default,
+      Component: (await import("@/layouts/home-layout")).default,
     }),
     children: [
       {
@@ -21,6 +22,28 @@ const router = createBrowserRouter([
         path: "/home",
         lazy: async () => ({
           Component: (await import("@/modules/home-page/home-page")).default,
+        }),
+      },
+    ],
+  },
+  {
+    path: "/admin-dashboard",
+    lazy: async () => ({
+      Component: (await import("@/layouts/admin-layout")).default,
+    }),
+    children: [
+      {
+        index: true,
+        lazy: async () => ({
+          Component: (await import("@/modules/admin-dashboard/admin-dashboard"))
+            .default,
+        }),
+      },
+      {
+        path: "/admin-dashboard",
+        lazy: async () => ({
+          Component: (await import("@/modules/admin-dashboard/admin-dashboard"))
+            .default,
         }),
       },
     ],
