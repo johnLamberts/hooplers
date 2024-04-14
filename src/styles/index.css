@@ -72,7 +72,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    /* background-color: #f1eee6; */
+    background-color: #e4edeb;
     font-family: "Bricolage Grotesque", sans-serif;
   }
 
