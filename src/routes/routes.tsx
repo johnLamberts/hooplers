@@ -1,4 +1,3 @@
-import AdminDashboard from "@/modules/admin-dashboard/admin-dashboard";
 import Login from "@/modules/authentication/login-page/login";
 import GeneralError from "@/modules/error-pages/general-error";
 import NotFoundError from "@/modules/error-pages/not-found";
