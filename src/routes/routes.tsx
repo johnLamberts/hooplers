@@ -1,6 +1,7 @@
 import Login from "@/modules/authentication/login-page/login";
 import GeneralError from "@/modules/error-pages/general-error";
 import NotFoundError from "@/modules/error-pages/not-found";
+import CreatePosts from "@/modules/posts-page/features/create-posts";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
           Component: (await import("@/modules/admin-dashboard/admin-dashboard"))
             .default,
         }),
+      },
+      {
+        path: "/admin-dashboard/create-posts",
+        Component: CreatePosts,
       },
     ],
   },
