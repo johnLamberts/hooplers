@@ -5,13 +5,12 @@
 .tiptap p {
   margin: 1em 0;
 }
-
-button {
+.tiptap button {
   border: 2px solid black;
   padding: 6px;
-  width: 80x;
   border-radius: 8px;
   background-color: #c1bcac;
+  margin: 0.3rem;
 }
 
 ul,
