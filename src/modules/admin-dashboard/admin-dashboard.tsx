@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ListFilterIcon, FileIcon, PlusCircleIcon } from "lucide-react";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 const Products = () => {
   const navigate = useNavigate();
 
@@ -106,11 +107,13 @@ const Products = () => {
               <Button
                 className="h-8 gap-1"
                 size="sm"
-                onClick={() => navigate("/create-product")}
+                onClick={() => navigate("/admin-dashboard/create-posts")}
+                iconPlacement="left"
+                Icon={ArrowLeftIcon}
               >
                 <PlusCircleIcon className="h-3.5 w-3.5" />
                 <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                  Add Product
+                  Add Posts
                 </span>
               </Button>
             </div>
