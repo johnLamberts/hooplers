@@ -1,5 +1,6 @@
 import { Layout, LayoutBody } from "@/components/layouts";
 import Tiptap from "./tiptap";
+import "./create-post.css";
 
 const CreatePosts = () => {
   return (
